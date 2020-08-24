@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "kluster-c73f"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "kluster-c73f"
+    spec:
+      containers:
+        - name: "kluster-c73f"
+          image: "fancy.azurecr.io/kluster"
+          ports:
+          - containerPort: 80
